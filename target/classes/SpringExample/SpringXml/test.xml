@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+        
+ <!-- bean definitions here -->
+<bean class ="SpringExample.SpringXml.Car" name="car1" autowire="byName" >
+<property name="model_no" value="0101"/>
+<property name="name" value ="Maruti" />
+<property name="carengg">
+
+
+<ref bean="eng2"/>
+</property>
+
+</bean>
+
+<bean class ="SpringExample.SpringXml.Engine" name="eng"  > 
+<property name="type" value ="Sedan"/>
+<property name="eng_no" value="113451"/>
+<property name="power" >
+<list>
+<value>BSFPOR</value>
+<value>BSSIX</value>
+<value>BSTOW</value>
+
+</list>
+</property>
+
+</bean>
+
+<bean class ="SpringExample.SpringXml.Engine" name="eng2" > 
+<property name="type" value ="Hachbag"/>
+<property name="eng_no" value="116743"/>
+<property name="power" value="BSSIX"/>
+</bean>
+
+</beans>
+
+
+
+
